@@ -46,9 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\Comand_Coffee.cs" />
+    <Compile Include="Control\Controls_Coffee.cs" />
+    <Compile Include="Model\Model_chek.cs" />
     <Compile Include="Model\Model_Coffe.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Form_add_new_coffee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form_add_new_coffee.Designer.cs">
+      <DependentUpon>Form_add_new_coffee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form_edit_selected.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form_edit_selected.Designer.cs">
+      <DependentUpon>Form_edit_selected.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Form_main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,9 +80,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\Form_add_new_coffee.resx">
+      <DependentUpon>Form_add_new_coffee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form_edit_selected.resx">
+      <DependentUpon>Form_edit_selected.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Form_main.resx">
       <DependentUpon>Form_main.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -81,8 +103,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Control\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
