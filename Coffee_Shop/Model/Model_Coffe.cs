@@ -20,17 +20,27 @@ namespace Coffee_Shop.Model
     }
     public class Model_Coffe
     {
-        public Model_Coffe(string name, double cost_price, double price, string grain_type, string country_of_origin, int gram_per_serving, string description)
+        public Model_Coffe() { }
+       
+        public Model_Coffe(string name, double cost_price, double price, string grain_type, string country_of_origin, int gram_per_serving, string info)
         {
             this.name = name;
             this.cost_price = cost_price;
             this.price = price;
+            this.gram_per_serving = gram_per_serving;
             this.grain_type = grain_type;
             this.country_of_origin = country_of_origin;
-            this.gram_per_serving = gram_per_serving;
-            this.info = description;
+            this.info = info;
+
+    /*        [Name]
+      ,[Cost_price]
+      ,[Price]
+      ,[Gram_per_serving]
+      ,[Grain_type]
+      ,[Country_of_origin]
+      ,[Info]*/
         }
-        public void Edit_Coffe(string name, double cost_price, double price, string grain_type, string country_of_origin, int gram_per_serving, string description)
+        public void Edit_Coffe(string name, double cost_price, double price, string grain_type, string country_of_origin, int gram_per_serving, string info)
         {
             this.name = name;
             this.cost_price = cost_price;
@@ -38,7 +48,7 @@ namespace Coffee_Shop.Model
             this.grain_type = grain_type;
             this.country_of_origin = country_of_origin;
             this.gram_per_serving = gram_per_serving;
-            this.info = description;
+            this.info = info;
         }
 
         public string name { get; set; } // Название
