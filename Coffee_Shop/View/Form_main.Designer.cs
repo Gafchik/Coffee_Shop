@@ -44,10 +44,10 @@ namespace Coffee_Shop.View
             this.button_drop_chek = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Coffe_editor_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reports_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Add_new_coffeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Delete_selected_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Edit_selected_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reports_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_count)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -224,12 +224,6 @@ namespace Coffee_Shop.View
             this.Coffe_editor_ToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
             this.Coffe_editor_ToolStripMenuItem.Text = "Редактор кофе";
             // 
-            // reports_ToolStripMenuItem
-            // 
-            this.reports_ToolStripMenuItem.Name = "reports_ToolStripMenuItem";
-            this.reports_ToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.reports_ToolStripMenuItem.Text = "Отчеты";
-            // 
             // Add_new_coffeeToolStripMenuItem
             // 
             this.Add_new_coffeeToolStripMenuItem.Name = "Add_new_coffeeToolStripMenuItem";
@@ -250,6 +244,12 @@ namespace Coffee_Shop.View
             this.Edit_selected_ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.Edit_selected_ToolStripMenuItem.Size = new System.Drawing.Size(255, 22);
             this.Edit_selected_ToolStripMenuItem.Text = "Редактировать выбраный";
+            // 
+            // reports_ToolStripMenuItem
+            // 
+            this.reports_ToolStripMenuItem.Name = "reports_ToolStripMenuItem";
+            this.reports_ToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.reports_ToolStripMenuItem.Text = "Отчеты";
             // 
             // Form_main
             // 

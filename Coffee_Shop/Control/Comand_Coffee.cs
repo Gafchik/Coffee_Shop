@@ -17,17 +17,17 @@ namespace Coffee_Shop.Control
         {
             using (SqlConnection connection = new SqlConnection(Resources.ConectString))
             {
-                connection.Open();
+                connection.Open(); // открываем соидинение
                 SqlCommand sqlComm = new SqlCommand("SELECT * FROM [DB_A71194_CoffeeShopDB].[dbo].[Coffee];", connection);
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlComm.CommandText, connection);
                 DataSet data = new DataSet();
-                adapter.Fill(data);                          
-                for (int i = 0; i < data.Tables[0].Rows.Count; i++)
+                adapter.Fill(data);
+                for (int i = 0; i < data.Tables[0].Rows.Count; i++) // бежим по строкам таблицы
                 {
-                    Model_Coffe model_Coffe = new Model_Coffe();           
-                    for (int q = 1; q < data.Tables[0].Columns.Count; q++)
+                    Model_Coffe model_Coffe = new Model_Coffe(); // временная переменная для листа
+                    for (int q = 1; q < data.Tables[0].Columns.Count; q++) // бежим по колонкам таблица
                     {
-                        string row_name = data.Tables[0].Columns[q].ToString();
+                        string row_name = data.Tables[0].Columns[q].ToString(); // название колонки для свич
                         switch (row_name)
                         {
                             case "Name":
@@ -55,6 +55,12 @@ namespace Coffee_Shop.Control
                                 break;
                         }
                     }
+                    // убераем лишнии пробелы
+                    model_Coffe.name = model_Coffe.name.Trim();
+                    model_Coffe.grain_type = model_Coffe.grain_type.Trim();
+                    model_Coffe.country_of_origin = model_Coffe.country_of_origin.Trim();
+                    model_Coffe.info = model_Coffe.info.Trim();
+                    // чистим память за временной переменной
                     Coffee_list.coffee_list.Add(model_Coffe);
                     GC.Collect(GC.GetGeneration(model_Coffe));
                 }

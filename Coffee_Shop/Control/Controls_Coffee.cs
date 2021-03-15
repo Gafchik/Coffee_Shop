@@ -15,6 +15,7 @@ namespace Coffee_Shop.Control
         internal void Load_coffee(ComboBox comboBox_select_coffe, TextBox textBox_coffe_info)
         {
             comboBox_select_coffe.Items.Clear();
+
             comand.Select_coffee_in_BD();
             Coffee_list.coffee_list.ForEach(i => comboBox_select_coffe.Items.Add(i.name));
             try
@@ -31,14 +32,14 @@ namespace Coffee_Shop.Control
             {
                 
                 Model_Coffe temp = Coffee_list.coffee_list.Find(i => i.name == comboBox_select_coffe.SelectedItem.ToString());
-                textBox_coffe_info.Text = "==========================\r\n"+
+                textBox_coffe_info.Text = "========================\r\n"+
                                            $"Название : {temp.name}\r\n" +
                                            $"Цена : {temp.price}\r\n" +
                                            $"Вид : зерна {temp.grain_type}\r\n" +
                                            $"Страна  происхождения : {temp.country_of_origin}\r\n" +
                                            $"грамм  на порцию : {temp.gram_per_serving}\r\n" +
                                            $"Описание : {temp.info}\r\n" +
-                                           "==========================\r\n";
+                                           "========================\r\n";
             }
             catch (Exception) { }
         }
