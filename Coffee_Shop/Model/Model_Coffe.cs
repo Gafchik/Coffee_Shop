@@ -11,10 +11,11 @@ namespace Coffee_Shop.Model
         public static List<Model_Coffe> coffee_list = new List<Model_Coffe>(); // коллекция для видов кофе
          static Coffee_list()
         {
-            coffee_list.Add(new Model_Coffe("Американо", 4.5, 15.6, "арабика", "США", 30, "Америкашка"));
+
+           /* coffee_list.Add(new Model_Coffe("Американо", 4.5, 15.6, "арабика", "США", 30, "Америкашка"));
             coffee_list.Add(new Model_Coffe("Еспрессо", 2.3, 10.6, "арабика", "США", 10, "еспрессо"));
             coffee_list.Add(new Model_Coffe("Горячий шоколад", 4.5, 15.6, "арабика", "США", 50, "Горячий шоколад"));
-            coffee_list.Add(new Model_Coffe("Латк", 4.5, 15.6, "арабика", "США", 70, "Латк"));
+            coffee_list.Add(new Model_Coffe("Латк", 4.5, 15.6, "арабика", "США", 70, "Латк"));*/
         }
     }
     public class Model_Coffe

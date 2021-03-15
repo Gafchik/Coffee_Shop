@@ -11,9 +11,11 @@ namespace Coffee_Shop.Control
 {
     public class Controls_Coffee
     {
+        Comand_Coffee comand = new Comand_Coffee();
         internal void Load_coffee(ComboBox comboBox_select_coffe, TextBox textBox_coffe_info)
         {
             comboBox_select_coffe.Items.Clear();
+            comand.Select_coffee_in_BD();
             Coffee_list.coffee_list.ForEach(i => comboBox_select_coffe.Items.Add(i.name));
             try
             {
