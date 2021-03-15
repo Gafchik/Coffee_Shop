@@ -40,14 +40,12 @@ namespace Coffee_Shop.Control
             }
             catch (Exception) { }
         }
-
         internal void Edit_selected(ComboBox comboBox_select_coffe)
         {
             Form_edit_selected form_edit = new Form_edit_selected(comboBox_select_coffe);
             form_edit.ShowDialog();
             GC.Collect(GC.GetGeneration(form_edit));
         }
-
         internal void Delete_selected(ComboBox comboBox_select_coffe) => Coffee_list.coffee_list.RemoveAt(Coffee_list.coffee_list.FindIndex(i => i.name == comboBox_select_coffe.SelectedItem.ToString()));      
         internal void Add_new_Coffee()
         {
