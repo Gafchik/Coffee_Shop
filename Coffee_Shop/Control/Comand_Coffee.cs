@@ -1,14 +1,8 @@
 ﻿using Coffee_Shop.Model;
 using Coffee_Shop.Properties;
 using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Linq.Mapping;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Data.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Coffee_Shop.Control
