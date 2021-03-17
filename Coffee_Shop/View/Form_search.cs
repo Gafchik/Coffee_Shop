@@ -49,9 +49,9 @@ namespace Coffee_Shop.View
 
             update();
             List<Model_Coffee> search_list = new List<Model_Coffee>();
-            Coffee_list.coffee_list.ForEach(i => search_list.Add(i));
+           
             textBox_rezult.Text = "";
-            foreach (var item in search_list)
+            foreach (var item in Coffee_list.coffee_list)
             {
                 int count_temp = 0;
 
@@ -76,8 +76,9 @@ namespace Coffee_Shop.View
                             item.cost_price <= Convert.ToInt32(numericUpDown_gramm_E.Value))
                             count_temp++;
                 if (count_temp == count_true)
-                    textBox_rezult.Text += item.Get_All_info();
+                    search_list.Add(item);
             }
+            search_list.ForEach(i => textBox_rezult.Text += i.Get_All_info());
             GC.Collect(GC.GetGeneration(search_list));
         }
 
