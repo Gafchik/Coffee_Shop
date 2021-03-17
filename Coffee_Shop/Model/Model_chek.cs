@@ -19,13 +19,13 @@ namespace Coffee_Shop.Model
     public class Model_chek
     {
         public static DateTime time { get; private set; }
-        public Model_chek(Model_Coffe coffee, int count)
+        public Model_chek(Model_Coffee coffee, int count)
         {
             time = DateTime.Now;
             this.coffee = coffee;
             this.count = count;
         }
-        public Model_Coffe coffee { get; set; }
+        public Model_Coffee coffee { get; set; }
         public int count { get; set; }
        
        

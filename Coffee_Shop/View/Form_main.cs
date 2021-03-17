@@ -31,9 +31,13 @@ namespace Coffee_Shop.View
         private void Edit_selected_ToolStripMenuItem_Click(object sender, EventArgs e)
         { control.Edit_selected(comboBox_select_coffe); control.Load_coffee(comboBox_select_coffe, textBox_coffe_info); }
         private void Delete_selected_ToolStripMenuItem_Click(object sender, EventArgs e)
-        { control.Delete_selected(comboBox_select_coffe); control.Load_coffee(comboBox_select_coffe, textBox_coffe_info); }      
+        {
+            control.Delete_selected(comboBox_select_coffe);
+            MessageBox.Show("Елемент удален", "!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            control.Load_coffee(comboBox_select_coffe, textBox_coffe_info); 
+        }      
         private void Add_new_coffeeToolStripMenuItem_Click(object sender, EventArgs e)
-        { control.Add_new_Coffee(); control.Load_coffee(comboBox_select_coffe, textBox_coffe_info); }
+        { control.Add_new_Coffee();  control.Load_coffee(comboBox_select_coffe, textBox_coffe_info); }
         private void Button_drop_chek_Click(object sender, EventArgs e)=> control.drop_chek(numeric_count, textBox_chek, comboBox_select_coffe, label_price);
         private void Button_add_to_chek_Click(object sender, EventArgs e) => control.add_to_chek(numeric_count, textBox_chek,comboBox_select_coffe, label_price);      
         private void ComboBox_select_coffe_SelectedIndexChanged(object sender, EventArgs e) => control.Selected_coffee(comboBox_select_coffe, textBox_coffe_info);      

@@ -68,5 +68,40 @@ namespace Coffee_Shop.Properties {
                 return ResourceManager.GetString("ConectString", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на SELECT [Id] FROM [dbo].[Coffee] WHERE [dbo].[Coffee].[Name] = @Name;.
+        /// </summary>
+        internal static string SQL_Dell_Selected {
+            get {
+                return ResourceManager.GetString("SQL_Dell_Selected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на SELECT * FROM [DB_A71194_CoffeeShopDB].[dbo].[Coffee];.
+        /// </summary>
+        internal static string SQL_Select_ALL {
+            get {
+                return ResourceManager.GetString("SQL_Select_ALL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на SELECT  [Id]
+        ///      ,[Name]
+        ///      ,[Cost_price]
+        ///      ,[Price]
+        ///      ,[Gram_per_serving]
+        ///      ,[Grain_type]
+        ///      ,[Country_of_origin]
+        ///      ,[Info]
+        ///  FROM [DB_A71194_CoffeeShopDB].[dbo].[Coffee];.
+        /// </summary>
+        internal static string test {
+            get {
+                return ResourceManager.GetString("test", resourceCulture);
+            }
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Linq.Mapping;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace Coffee_Shop.Model
 {
     public static class Coffee_list
     {
-        public static List<Model_Coffe> coffee_list = new List<Model_Coffe>(); // коллекция для видов кофе
+        public static List<Model_Coffee> coffee_list = new List<Model_Coffee>(); // коллекция для видов кофе
          static Coffee_list()
         {
 
@@ -18,12 +19,14 @@ namespace Coffee_Shop.Model
             coffee_list.Add(new Model_Coffe("Латк", 4.5, 15.6, "арабика", "США", 70, "Латк"));*/
         }
     }
-    public class Model_Coffe
+    [Table(Name = "Coffee")]
+    public class Model_Coffee
     {
-        public Model_Coffe() { }
-       
-        public Model_Coffe(string name, double cost_price, double price, string grain_type, string country_of_origin, int gram_per_serving, string info)
+        public Model_Coffee() { }
+
+        public Model_Coffee(string name, double cost_price, double price, string grain_type, string country_of_origin, int gram_per_serving, string info)
         {
+
             this.name = name;
             this.cost_price = cost_price;
             this.price = price;
@@ -32,31 +35,49 @@ namespace Coffee_Shop.Model
             this.country_of_origin = country_of_origin;
             this.info = info;
 
-    /*        [Name]
-      ,[Cost_price]
-      ,[Price]
-      ,[Gram_per_serving]
-      ,[Grain_type]
-      ,[Country_of_origin]
-      ,[Info]*/
+            /*        [Name]
+              ,[Cost_price]
+              ,[Price]
+              ,[Gram_per_serving]
+              ,[Grain_type]
+              ,[Country_of_origin]
+              ,[Info]*/
         }
-        public void Edit_Coffe(string name, double cost_price, double price, string grain_type, string country_of_origin, int gram_per_serving, string info)
+        public void Edit_Coffe(Model_Coffee coffee)
         {
-            this.name = name;
-            this.cost_price = cost_price;
-            this.price = price;
-            this.grain_type = grain_type;
-            this.country_of_origin = country_of_origin;
-            this.gram_per_serving = gram_per_serving;
-            this.info = info;
+
+            this.name = coffee.name;
+            this.cost_price = coffee.cost_price;
+            this.price = coffee.price;
+            this.grain_type = coffee.grain_type;
+            this.country_of_origin = coffee.country_of_origin;
+            this.gram_per_serving = coffee.gram_per_serving;
+            this.info = coffee.info;
         }
 
+
+        [Column(IsPrimaryKey = true, IsDbGenerated = true)]
+        public int Id { get; set; }
+
+        [Column(Name = "Name")]
         public string name { get; set; } // Название
+
+        [Column(Name = "Cost_price")]
         public double cost_price { get; set; } //   Себестоимость
+
+        [Column(Name = "Price")]
         public double price { get; set; } //  Цена
+
+        [Column(Name = "Grain_type")]
         public string grain_type { get; set; } // Вид зерна
+
+        [Column(Name = "Country_of_origin")]
         public string country_of_origin { get; set; } // Страна происхождения
+
+        [Column(Name = "Gram_per_serving")]
         public int gram_per_serving { get; set; } // грамм на порцию
+
+        [Column(Name = "Info")]
         public string info { get; set; } // Описание
     }
 }

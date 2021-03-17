@@ -120,4 +120,21 @@
   <data name="ConectString" xml:space="preserve">
     <value>Data Source=SQL5103.site4now.net;Initial Catalog=DB_A71194_CoffeeShopDB;User Id=DB_A71194_CoffeeShopDB_admin;Password=QQddRRvv1</value>
   </data>
+  <data name="SQL_Dell_Selected" xml:space="preserve">
+    <value>SELECT [Id] FROM [dbo].[Coffee] WHERE [dbo].[Coffee].[Name] = @Name;</value>
+  </data>
+  <data name="SQL_Select_ALL" xml:space="preserve">
+    <value>SELECT * FROM [DB_A71194_CoffeeShopDB].[dbo].[Coffee];</value>
+  </data>
+  <data name="test" xml:space="preserve">
+    <value>SELECT  [Id]
+      ,[Name]
+      ,[Cost_price]
+      ,[Price]
+      ,[Gram_per_serving]
+      ,[Grain_type]
+      ,[Country_of_origin]
+      ,[Info]
+  FROM [DB_A71194_CoffeeShopDB].[dbo].[Coffee];</value>
+  </data>
 </root>

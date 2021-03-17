@@ -14,8 +14,8 @@ namespace Coffee_Shop.Control
         Comand_Coffee comand = new Comand_Coffee();
         internal void Load_coffee(ComboBox comboBox_select_coffe, TextBox textBox_coffe_info)
         {
+            Coffee_list.coffee_list.Clear();
             comboBox_select_coffe.Items.Clear();
-
             comand.Select_coffee_in_BD();
             Coffee_list.coffee_list.ForEach(i => comboBox_select_coffe.Items.Add(i.name));
             try
@@ -31,7 +31,7 @@ namespace Coffee_Shop.Control
             try
             {
                 
-                Model_Coffe temp = Coffee_list.coffee_list.Find(i => i.name == comboBox_select_coffe.SelectedItem.ToString());
+                Model_Coffee temp = Coffee_list.coffee_list.Find(i => i.name == comboBox_select_coffe.SelectedItem.ToString());
                 textBox_coffe_info.Text = "========================\r\n"+
                                            $"Название : {temp.name}\r\n" +
                                            $"Цена : {temp.price}\r\n" +
@@ -49,7 +49,8 @@ namespace Coffee_Shop.Control
             form_edit.ShowDialog();
             GC.Collect(GC.GetGeneration(form_edit));
         }
-        internal void Delete_selected(ComboBox comboBox_select_coffe) => Coffee_list.coffee_list.RemoveAt(Coffee_list.coffee_list.FindIndex(i => i.name == comboBox_select_coffe.SelectedItem.ToString()));      
+        internal void Delete_selected(ComboBox comboBox_select_coffe) => comand.Delete_selected(comboBox_select_coffe);
+            //Coffee_list.coffee_list.RemoveAt(Coffee_list.coffee_list.FindIndex(i => i.name == comboBox_select_coffe.SelectedItem.ToString()));      
         internal void Add_new_Coffee()
         {
             Form_add_new_coffee form_add = new Form_add_new_coffee();

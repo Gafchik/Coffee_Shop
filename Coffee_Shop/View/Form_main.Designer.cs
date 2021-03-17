@@ -271,8 +271,9 @@ namespace Coffee_Shop.View
             this.Controls.Add(this.label_select_coffee);
             this.Controls.Add(this.comboBox_select_coffe);
             this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Form_main";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Coffee Shop";
             ((System.ComponentModel.ISupportInitialize)(this.numeric_count)).EndInit();
             this.menuStrip1.ResumeLayout(false);
