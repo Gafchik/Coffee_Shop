@@ -48,6 +48,7 @@ namespace Coffee_Shop.View
             this.Delete_selected_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Edit_selected_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reports_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_count)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -247,9 +248,18 @@ namespace Coffee_Shop.View
             // 
             // reports_ToolStripMenuItem
             // 
+            this.reports_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.searchToolStripMenuItem});
             this.reports_ToolStripMenuItem.Name = "reports_ToolStripMenuItem";
             this.reports_ToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.reports_ToolStripMenuItem.Text = "Отчеты";
+            // 
+            // searchToolStripMenuItem
+            // 
+            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
+            this.searchToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.searchToolStripMenuItem.Text = "Поиск";
             // 
             // Form_main
             // 
@@ -304,5 +314,6 @@ namespace Coffee_Shop.View
         private System.Windows.Forms.ToolStripMenuItem Add_new_coffeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Delete_selected_ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Edit_selected_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
     }
 }

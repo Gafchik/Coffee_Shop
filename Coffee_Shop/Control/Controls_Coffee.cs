@@ -30,16 +30,7 @@ namespace Coffee_Shop.Control
         {
             try
             {
-                
-                Model_Coffee temp = Coffee_list.coffee_list.Find(i => i.name == comboBox_select_coffe.SelectedItem.ToString());
-                textBox_coffe_info.Text = "========================\r\n"+
-                                           $"Название : {temp.name}\r\n" +
-                                           $"Цена : {temp.price}\r\n" +
-                                           $"Вид : зерна {temp.grain_type}\r\n" +
-                                           $"Страна  происхождения : {temp.country_of_origin}\r\n" +
-                                           $"грамм  на порцию : {temp.gram_per_serving}\r\n" +
-                                           $"Описание : {temp.info}\r\n" +
-                                           "========================\r\n";
+                textBox_coffe_info.Text = Coffee_list.coffee_list.Find(i => i.name == comboBox_select_coffe.SelectedItem.ToString()).Get_All_info(); 
             }
             catch (Exception) { }
         }
@@ -50,7 +41,7 @@ namespace Coffee_Shop.Control
             GC.Collect(GC.GetGeneration(form_edit));
         }
         internal void Delete_selected(ComboBox comboBox_select_coffe) => comand.Delete_selected(comboBox_select_coffe);
-            //Coffee_list.coffee_list.RemoveAt(Coffee_list.coffee_list.FindIndex(i => i.name == comboBox_select_coffe.SelectedItem.ToString()));      
+           
         internal void Add_new_Coffee()
         {
             Form_add_new_coffee form_add = new Form_add_new_coffee();

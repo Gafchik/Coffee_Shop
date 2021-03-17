@@ -26,7 +26,11 @@ namespace Coffee_Shop.View
             Add_new_coffeeToolStripMenuItem.Click += Add_new_coffeeToolStripMenuItem_Click;
             Delete_selected_ToolStripMenuItem.Click += Delete_selected_ToolStripMenuItem_Click;
             Edit_selected_ToolStripMenuItem.Click += Edit_selected_ToolStripMenuItem_Click;
+            searchToolStripMenuItem.Click += SearchToolStripMenuItem_Click;
         }
+
+        private void SearchToolStripMenuItem_Click(object sender, EventArgs e) => new Form_search().Show();
+       
 
         private void Edit_selected_ToolStripMenuItem_Click(object sender, EventArgs e)
         { control.Edit_selected(comboBox_select_coffe); control.Load_coffee(comboBox_select_coffe, textBox_coffe_info); }

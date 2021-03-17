@@ -54,7 +54,17 @@ namespace Coffee_Shop.Model
             this.gram_per_serving = coffee.gram_per_serving;
             this.info = coffee.info;
         }
-
+        public string Get_All_info()
+        {
+           return "========================\r\n" +
+           $"Название : {this.name}\r\n" +
+           $"Цена : {this.price}\r\n" +
+           $"Вид : зерна {this.grain_type}\r\n" +
+           $"Страна  происхождения : {this.country_of_origin}\r\n" +
+           $"грамм  на порцию : {this.gram_per_serving}\r\n" +
+           $"Описание : {this.info}\r\n" +
+           "========================\r\n";
+        }
 
         [Column(IsPrimaryKey = true, IsDbGenerated = true)]
         public int Id { get; set; }
